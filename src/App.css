@@ -1,3 +1,13 @@
 .App {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  background: snow;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: left;
+  margin: 5px;
 }
