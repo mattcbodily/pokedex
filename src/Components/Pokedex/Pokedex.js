@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Header from '../Header/Header';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 import './Pokedex.css';
 
 export default props => {
@@ -22,25 +23,16 @@ export default props => {
         getPokemon()
     }, [])
 
-    console.log(pokemonArr)
-
     return (
         <div>
             <Header />
             <h1>Pokedex</h1>
             <section className='pokedex-flex'>
                 {pokemonArr.map((pokemon, i) => (
-                    <div className={`pokemon-container`}>
-                        <div className='pokemon-info'>
-                            <h4>{pokemon.name}</h4>
-                            {/* {pokemon.types.map((type, i) => (
-                                <div className='pokemon-type' key={i}>
-                                    {type.name}
-                                </div>
-                            ))} */}
-                        </div>
+                    <Link to={`/pokemon/${pokemon.id}`} className={`pokemon-container`} key={i}>
+                        <h4 className='pokemon-info'>{pokemon.name}</h4>
                         <img src={pokemon.image} alt={pokemon.name}/>
-                    </div>
+                    </Link>
                 ))}
             </section>
         </div>
