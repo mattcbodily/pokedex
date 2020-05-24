@@ -81,9 +81,25 @@
 }
 
 .poison {
-    background: #725AC1;
+    background: #74226C;
 }
 
 .poison-type {
+    background: #A14B99;
+}
+
+.bug {
+    background: #28965A;
+}
+
+.bug-type {
+    background: #5FDA97;
+}
+
+.psychic {
+    background: #725AC1;
+}
+
+.psychic-type {
     background: #9B84E6;
 }
