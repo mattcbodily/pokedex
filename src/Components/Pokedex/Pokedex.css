@@ -24,7 +24,7 @@
 }
 
 .pokemon-info {
-    width: 80px;
+    width: 90px;
     position: absolute;
     top: 10px;
     left: 10px;
@@ -70,4 +70,20 @@
 
 .electric-type {
     background: #FDE78A;
+}
+
+.normal {
+    background: #F9DBBD;
+}
+
+.normal-type {
+    background: #FFE7CF;
+}
+
+.poison {
+    background: #725AC1;
+}
+
+.poison-type {
+    background: #9B84E6;
 }
