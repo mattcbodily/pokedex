@@ -7,21 +7,20 @@ import './Pokedex.css';
 export default props => {
     const [pokemonArr, setPokemonArr] = useState([]);
 
-    const getPokemon = async() => {
-        const res = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=151');
-        const data = res.data.results;
-        const pokemon = data.map((element, i) => ({
-            name: element.name,
-            id: i + 1,
-            image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i + 1}.png`
-        }))
-
-        setPokemonArr(pokemon);
+    const getAllPokemon = async() => {
+        let allPokemon = [];
+        for(let i = 1; i <= 151; i++){
+            let pokemon = await axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`);
+            allPokemon.push(pokemon.data);
+        }
+        setPokemonArr(allPokemon);
     }
 
-    useEffect(() => {
-        getPokemon()
+    useEffect(() => {
+        getAllPokemon()
     }, [])
+
+    console.log(pokemonArr)
 
     return (
         <div>
@@ -29,9 +28,14 @@ export default props => {
             <h1>Pokedex</h1>
             <section className='pokedex-flex'>
                 {pokemonArr.map((pokemon, i) => (
-                    <Link to={`/pokemon/${pokemon.id}`} className={`pokemon-container`} key={i}>
-                        <h4 className='pokemon-info'>{pokemon.name}</h4>
-                        <img src={pokemon.image} alt={pokemon.name}/>
+                    <Link to={`/pokemon/${pokemon.id}`} className={`pokemon-container ${pokemon.types.find(element => element.slot === 1).type.name}`} key={i}>
+                        <div className='pokemon-info'>
+                            <h4>{pokemon.name}</h4>
+                            {pokemon.types.sort((a, b) => a.slot - b.slot).map((type, i) => (
+                                <div key={i} className={`pokemon-type ${pokemon.types.find(element => element.slot === 1).type.name}-type`}>{type.type.name}</div>
+                            ))}
+                        </div>
+                        <img src={pokemon.sprites.front_default} alt={pokemon.name}/>
                     </Link>
                 ))}
             </section>

@@ -17,26 +17,57 @@
 }
 
 .pokemon-container img {
-    width: 100px;
+    height: 90px;
     position: absolute;
-    top: 0px;
-    left: 50%;
-    margin-left: -50px;
+    bottom: 0px;
+    right: 0px;
 }
 
 .pokemon-info {
-    width: 100%;
+    width: 80px;
     position: absolute;
-    bottom: 10px;
-    text-align: center;
-    margin: 0px;
+    top: 10px;
+    left: 10px;
 }
 
 .pokemon-type {
-    height: 22px;
+    height: 20px;
     width: 65px;
     font-size: 13px;
-    line-height: 22px;
+    line-height: 20px;
     border-radius: 20px;
     background-color: #61E1C8;
+    margin-top: 5px;
+}
+
+.grass {
+    background: #48D1B1;
+}
+
+.grass-type {
+    background: #61E1C8;
+}
+
+.fire {
+    background: #EF6566;
+}
+
+.fire-type {
+    background: #F18D8C;
+}
+
+.water {
+    background: #77BEF9;
+}
+
+.water-type {
+    background: #8FD0FA;
+}
+
+.electric {
+    background: #FBD86E;
+}
+
+.electric-type {
+    background: #FDE78A;
 }
