@@ -82,6 +82,7 @@
 
 .poison {
     background: #74226C;
+    /* background: #9B5DE5; */
 }
 
 .poison-type {
@@ -102,4 +103,60 @@
 
 .psychic-type {
     background: #9B84E6;
+}
+
+.ground {
+    background: #FCAB64;
+}
+
+.ground-type {
+    background: #FEC797;
+}
+
+.ice {
+    background: #90F3FF;
+}
+
+.ice-type {
+    background: #BEF7FE;
+}
+
+.fairy {
+    background: #E56399;
+}
+
+.fairy-type {
+    background: #F083B0;
+}
+
+.fighting {
+    background: #BD632F;
+}
+
+.fighting-type {
+    background: #CB7F53;
+}
+
+.ghost {
+    background: #301A4B;
+}
+
+.ghost-type {
+    background: #4E3270;
+}
+
+.rock {
+    background: #352208;
+}
+
+.rock-type {
+    background: #543915;
+}
+
+.dragon {
+    background: #64A6BD;
+}
+
+.dragon-type {
+    background: #82C3DA;
 }

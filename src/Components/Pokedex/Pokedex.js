@@ -20,8 +20,6 @@ export default props => {
         getAllPokemon()
     }, [])
 
-    console.log(pokemonArr)
-
     return (
         <div>
             <Header />
