@@ -1,0 +1,5 @@
+.pokemon {
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 20px 10px;
+}

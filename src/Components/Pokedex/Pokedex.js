@@ -16,7 +16,7 @@ const Pokedex = props => {
             allPokemon.push(pokemon.data);
         }
         setPokemonArr(allPokemon);
-        props.loadingObj.handleLoading(false);
+        props.loadingObj.handleLoading();
     }
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const Pokedex = props => {
     }, [])
 
     return (
-        <div>
+        <div className='pokedex'>
             {props.loadingObj.loading
             ? (<>
                 <img src={pokeball} alt='loading' className='loading-image'/>

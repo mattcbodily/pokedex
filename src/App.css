@@ -1,7 +1,6 @@
 .App {
   min-height: 100vh;
   box-sizing: border-box;
-  padding: 20px 10px;
   background: snow;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -10,4 +9,153 @@
 h1, h4 {
   text-align: left;
   margin: 5px;
+}
+
+.loading-image {
+  height: 70px;
+  width: 70px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -35px;
+  animation: spin 2s linear infinite;
+}
+
+.loading-prompt {
+  width: 70px;
+  position: fixed;
+  top: 54%;
+  left: 50%;
+  margin-left: -35px;
+}
+
+.grass {
+  background: #48D1B1;
+}
+
+.grass-type {
+  background: #61E1C8;
+}
+
+.fire {
+  background: #EF6566;
+}
+
+.fire-type {
+  background: #F18D8C;
+}
+
+.water {
+  background: #77BEF9;
+}
+
+.water-type {
+  background: #8FD0FA;
+}
+
+.electric {
+  background: #FBD86E;
+}
+
+.electric-type {
+  background: #FDE78A;
+}
+
+.normal {
+  background: #F9DBBD;
+}
+
+.normal-type {
+  background: #FFE7CF;
+}
+
+.poison {
+  background: #74226C;
+  /* background: #9B5DE5; */
+}
+
+.poison-type {
+  background: #A14B99;
+}
+
+.bug {
+  background: #28965A;
+}
+
+.bug-type {
+  background: #5FDA97;
+}
+
+.psychic {
+  background: #725AC1;
+}
+
+.psychic-type {
+  background: #9B84E6;
+}
+
+.ground {
+  background: #FCAB64;
+}
+
+.ground-type {
+  background: #FEC797;
+}
+
+.ice {
+  background: #90F3FF;
+}
+
+.ice-type {
+  background: #BEF7FE;
+}
+
+.fairy {
+  background: #E56399;
+}
+
+.fairy-type {
+  background: #F083B0;
+}
+
+.fighting {
+  background: #BD632F;
+}
+
+.fighting-type {
+  background: #CB7F53;
+}
+
+.ghost {
+  background: #301A4B;
+}
+
+.ghost-type {
+  background: #4E3270;
+}
+
+.rock {
+  background: #352208;
+}
+
+.rock-type {
+  background: #543915;
+}
+
+.dragon {
+  background: #64A6BD;
+}
+
+.dragon-type {
+  background: #82C3DA;
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
 }
