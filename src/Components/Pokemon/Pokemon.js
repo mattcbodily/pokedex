@@ -35,11 +35,11 @@ const Pokemon = props => {
             <h1>{pokemon.name}</h1>
             <div className='pokemon-about'>
              <img src={pokemon.sprites.front_default} alt={pokemon.name} className='pokemon-about-image'/>
-             <nav>
-                 <Link to={`/pokemon/${id}`}>About</Link>
-                 <Link to={`/pokemon/${id}/stats`}>Base Stats</Link>
-                 <Link to={`/pokemon/${id}/evolution`}>Evolution</Link>
-                 <Link to={`/pokemon/${id}/moves`}>Moves</Link>
+             <nav className='link-flex'>
+                 <Link to={`/pokemon/${id}`} className={`about-links ${props.location.pathname === ('/pokemon/' + id) ? 'active-link' : null}`}>About</Link>
+                 <Link to={`/pokemon/${id}/stats`} className={`about-links ${props.location.pathname.includes('stats') ? 'active-link' : null}`}>Base Stats</Link>
+                 <Link to={`/pokemon/${id}/evolution`} className={`about-links ${props.location.pathname.includes('evolution') ? 'active-link' : null}`}>Evolution</Link>
+                 <Link to={`/pokemon/${id}/moves`} className={`about-links ${props.location.pathname.includes('moves') ? 'active-link' : null}`}>Moves</Link>
              </nav>
              <Switch>
                 <Route exact path='/pokemon/:id' component={About}/>
