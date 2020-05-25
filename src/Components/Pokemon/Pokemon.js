@@ -46,7 +46,7 @@ const Pokemon = props => {
                  <Link to={`/pokemon/${id}/moves`} className={`about-links ${props.location.pathname.includes('moves') ? 'active-link' : null}`}>Moves</Link>
              </nav>
              <Switch>
-                <Route exact path='/pokemon/:id' component={About}/>
+                <Route exact path='/pokemon/:id' render={(props) => <About {...props} flavorText={pokemon.flavorText} height={pokemon.height} weight={pokemon.weight}/>}/>
                 <Route path='/pokemon/:id/stats' component={Stats}/>
                 <Route path='/pokemon/:id/evolution' component={Evolution}/>
                 <Route path='/pokemon/:id/moves' component={Moves}/>
