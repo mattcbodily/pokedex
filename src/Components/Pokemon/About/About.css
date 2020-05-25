@@ -1,0 +1,16 @@
+.pokemon-about {
+    height: 55%;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    background: snow;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.pokemon-about-image {
+    width: 270px;
+    position: absolute;
+    top: -45%;
+    left: 50%;
+    margin-left: -135px;
+}

@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import {Switch, Route} from 'react-router-dom';
 import Header from '../Header/Header';
+import About from './About/About';
 import loading from '../../HOCs/loading';
 import pokeball from '../../assets/pokeball-loading.png';
 import './Pokemon.css';
@@ -25,7 +27,9 @@ const Pokemon = props => {
             <h4>Loading...</h4>
            </>)
         : (<div className={`pokemon ${pokemon.types.find(element => element.slot === 1).type.name}`}>
-            <h4>{pokemon.name}</h4>
+            <Header />
+            <h1>{pokemon.name}</h1>
+            <About pokemon={pokemon}/>
            </div>)}
         </div>
     )
