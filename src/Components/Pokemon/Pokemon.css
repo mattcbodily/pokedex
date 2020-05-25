@@ -3,3 +3,23 @@
     box-sizing: border-box;
     color: white;
 }
+
+.pokemon-about {
+    height: 55%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 25px;
+    position: fixed;
+    bottom: 0px;
+    background: snow;
+    color: black;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.pokemon-about-image {
+    width: 200px;
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    margin-left: -100px;
+}
