@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import Header from '../Header/Header';
+import loading from '../../HOCs/loading';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 import pokeball from '../../assets/pokeball-loading.png';
 import './Pokedex.css';
 
-export default props => {
-    const [pokemonArr, setPokemonArr] = useState([]),
-          [loading, setLoading] = useState(true);
+const Pokedex = props => {
+    const [pokemonArr, setPokemonArr] = useState([])
 
     const getAllPokemon = async() => {
         let allPokemon = [];
@@ -16,7 +16,7 @@ export default props => {
             allPokemon.push(pokemon.data);
         }
         setPokemonArr(allPokemon);
-        setLoading(false);
+        props.loadingObj.handleLoading(false);
     }
 
     useEffect(() => {
@@ -25,7 +25,7 @@ export default props => {
 
     return (
         <div>
-            {loading
+            {props.loadingObj.loading
             ? (<>
                 <img src={pokeball} alt='loading' className='loading-image'/>
                 <h4 className='loading-prompt'>Loading...</h4>
@@ -49,4 +49,6 @@ export default props => {
               </>}
         </div>
     )
-};
+}
+
+export default loading(Pokedex);

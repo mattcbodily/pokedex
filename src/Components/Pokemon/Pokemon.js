@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import Header from '../Header/Header';
 import './Pokemon.css';
 
 export default props => {
@@ -12,6 +13,8 @@ export default props => {
     }, [])
 
     return (
-    <div>{pokemon.name}</div>
+        <div className={`pokemon`}>
+            <Header />
+        </div>
     )
 }
