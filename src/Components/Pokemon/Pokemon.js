@@ -16,9 +16,11 @@ const Pokemon = props => {
 
     const getPokemon = async() => {
         const pokeData = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`),
-              flavorText = await axios.get(`https://pokeapi.co/api/v2/pokemon-species/${id}`);
+              flavorText = await axios.get(`https://pokeapi.co/api/v2/pokemon-species/${id}`),
+              enFlavorText = flavorText.data.flavor_text_entries.filter((text, i) => text.language.name === 'en');
 
-        let pokeObj = {...pokeData.data, flavorText: flavorText.data.flavor_text_entries[1].flavor_text};
+        let pokeObj = {...pokeData.data, flavorText: enFlavorText[0].flavor_text};
+
         setPokemon(pokeObj);
         props.loadingObj.handleLoading();
     }
