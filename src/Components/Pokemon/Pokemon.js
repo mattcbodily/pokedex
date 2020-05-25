@@ -14,13 +14,17 @@ const Pokemon = props => {
     let [pokemon, setPokemon] = useState({});
     const {id} = props.match.params;
 
+    const getPokemon = async() => {
+        const pokeData = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`),
+              flavorText = await axios.get(`https://pokeapi.co/api/v2/pokemon-species/${id}`);
+
+        let pokeObj = {...pokeData.data, flavorText: flavorText.data.flavor_text_entries[1].flavor_text};
+        setPokemon(pokeObj);
+        props.loadingObj.handleLoading();
+    }
+
     useEffect(() => {
-        axios.get(`https://pokeapi.co/api/v2/pokemon/${props.match.params.id}`)
-        .then(res => {
-            setPokemon(res.data);
-            props.loadingObj.handleLoading()
-        })
-        .catch(err => console.log(err));
+        getPokemon()
     }, [])
 
     return (

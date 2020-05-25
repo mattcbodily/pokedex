@@ -34,6 +34,7 @@
     text-decoration: none;
     color: lightgray;
     line-height: 30px;
+    font-weight: 600;
 }
 
 .active-link {
