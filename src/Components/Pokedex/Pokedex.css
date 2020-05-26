@@ -3,6 +3,15 @@
     padding: 20px 10px;
 }
 
+.gray-icon {
+    height: 215px;
+    width: 215px;
+    position: absolute;
+    top: -63px;
+    right: -75px;
+    z-index: 0;
+}
+
 .pokedex-flex {
     box-sizing: border-box;
     padding-top: 25px;
@@ -10,8 +19,6 @@
     justify-content: center;
     flex-wrap: wrap;
 }
-
-
 
 .pokemon-container {
     height: 120px;
@@ -23,12 +30,6 @@
     position: relative;
 }
 
-.pokemon-container img {
-    height: 90px;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-}
 
 .pokemon-info {
     width: 90px;
@@ -45,4 +46,21 @@
     border-radius: 20px;
     background-color: #61E1C8;
     margin-top: 5px;
+}
+
+.poke-image {
+    height: 90px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 2;
+}
+
+.background-icon { 
+    height: 95px;
+    width: 95px;
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    z-index: 1;
 }

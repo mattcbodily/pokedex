@@ -3,7 +3,9 @@ import Header from '../Header/Header';
 import loading from '../../HOCs/loading';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
-import pokeball from '../../assets/pokeball-loading.png';
+import pokeLoading from '../../assets/pokeball-loading.png';
+import pokeIcon from '../../assets/pokesvg.svg';
+import grayIcon from '../../assets/gray-poke-svg.svg';
 import './Pokedex.css';
 
 const Pokedex = props => {
@@ -25,9 +27,10 @@ const Pokedex = props => {
 
     return (
         <div className='pokedex'>
+            <img src={grayIcon} alt='large pokeball' className='gray-icon'/>
             {props.loadingObj.loading
             ? (<>
-                <img src={pokeball} alt='loading' className='loading-image'/>
+                <img src={pokeLoading} alt='loading' className='loading-image'/>
                 <h4 className='loading-prompt'>Loading...</h4>
                </>)
             : <>
@@ -42,7 +45,8 @@ const Pokedex = props => {
                                     <div key={i} className={`pokemon-type ${pokemon.types.find(element => element.slot === 1).type.name}-type`}>{type.type.name}</div>
                                 ))}
                             </div>
-                            <img src={pokemon.sprites.front_default} alt={pokemon.name}/>
+                            <img src={pokemon.sprites.front_default} alt={pokemon.name} className='poke-image'/>
+                            <img src={pokeIcon} alt='pokeball' className='background-icon'/>
                         </Link>
                     ))}
                 </section>

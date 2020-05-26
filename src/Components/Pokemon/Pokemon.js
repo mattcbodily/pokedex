@@ -7,7 +7,7 @@ import Stats from './Stats/Stats';
 import Evolution from './Evolution/Evolution';
 import Moves from './Moves/Moves';
 import loading from '../../HOCs/loading';
-import pokeball from '../../assets/pokeball-loading.png';
+import pokeLoading from '../../assets/pokeball-loading.png';
 import './Pokemon.css';
 
 const Pokemon = props => {
@@ -33,7 +33,7 @@ const Pokemon = props => {
         <div>
         {props.loadingObj.loading
         ? (<>
-            <img src={pokeball} alt='loading' className='loading-image'/>
+            <img src={pokeLoading} alt='loading' className='loading-image'/>
             <h4>Loading...</h4>
            </>)
         : (<div className={`pokemon ${pokemon.types.find(element => element.slot === 1).type.name}`}>
