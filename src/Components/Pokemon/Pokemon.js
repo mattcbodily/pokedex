@@ -37,7 +37,7 @@ const Pokemon = props => {
             <h4>Loading...</h4>
            </>)
         : (<div className={`pokemon ${pokemon.types.find(element => element.slot === 1).type.name}`}>
-            <Header />
+            <Header theme='light'/>
             <h1>{pokemon.name}</h1>
             <div className='pokemon-about'>
              <img src={pokemon.sprites.front_default} alt={pokemon.name} className='pokemon-about-image'/>
