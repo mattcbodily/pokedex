@@ -7,32 +7,34 @@ import './Landing.css';
 export default props => (
     <div className='landing'>
         <img src={grayIcon} alt='gray icon' className='background-gray-icon'/>
-        <h1>What Pokemon</h1>
-        <h1>are you looking for?</h1>
-        <input className='search-bar' placeholder='Search Pokemon'/>
-        <nav className='landing-link-flex'>
-            <Link to='/pokedex' className='landing-links grass grass-shadow'>
-                <div className='bubble-style'></div>
-                Pokedex
-                <img src={pokeIcon} alt='pokeball icon' className='pokeball-icon'/>
-            </Link>
-            <Link to='/pokedex' className='landing-links fire fire-shadow'>
-                <div className='bubble-style'></div>
-                Team Builder
-                <img src={pokeIcon} alt='pokeball icon' className='pokeball-icon'/>
-            </Link>
-            <Link to='/pokedex' className='landing-links water water-shadow'>
-                <div className='bubble-style'></div>
-                Items
-                <img src={pokeIcon} alt='pokeball icon' className='pokeball-icon'/>
-            </Link>
-            <Link to='/pokedex' className='landing-links electric electric-shadow'>
-                <div className='bubble-style'></div>
-                Pack Builder
-                <img src={pokeIcon} alt='pokeball icon' className='pokeball-icon'/>
-            </Link>
-        </nav>
-        <section>
+        <section className='link-search-container'>
+            <h1>What Pokemon</h1>
+            <h1>are you looking for?</h1>
+            <input className='search-bar' placeholder='Search Pokemon'/>
+            <nav className='landing-link-flex'>
+                <Link to='/pokedex' className='landing-links grass grass-shadow'>
+                    <div className='bubble-style'></div>
+                    Pokedex
+                    <img src={pokeIcon} alt='pokeball icon' className='pokeball-icon'/>
+                </Link>
+                <Link to='/pokedex' className='landing-links fire fire-shadow'>
+                    <div className='bubble-style'></div>
+                    Team Builder
+                    <img src={pokeIcon} alt='pokeball icon' className='pokeball-icon'/>
+                </Link>
+                <Link to='/pokedex' className='landing-links water water-shadow'>
+                    <div className='bubble-style'></div>
+                    Items
+                    <img src={pokeIcon} alt='pokeball icon' className='pokeball-icon'/>
+                </Link>
+                <Link to='/pokedex' className='landing-links electric electric-shadow'>
+                    <div className='bubble-style'></div>
+                    Pack Builder
+                    <img src={pokeIcon} alt='pokeball icon' className='pokeball-icon'/>
+                </Link>
+            </nav>
+        </section>
+        <section className='news-container'>
             <h1>Pokemon News</h1>
         </section>
     </div>

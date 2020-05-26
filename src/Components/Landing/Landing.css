@@ -1,7 +1,8 @@
 .landing {
-    box-sizing: border-box;
-    padding: 35px 15px 10px 15px;
+    min-height: 100vh;
+    background-color: #E9E9E9;
 }
+
 
 .background-gray-icon {
     height: 200px;
@@ -11,11 +12,19 @@
     right: -75px;
 }
 
+.link-search-container {
+    height: 60vh;
+    box-sizing: border-box;
+    padding: 35px 15px 10px 15px;
+    border-radius: 0px 0px 30px 30px;
+    background-color: snow;
+}
+
 .search-bar {
     height: 35px;
-    width: 97%;
+    width: 100%;
     box-sizing: border-box;
-    margin-top: 25px;
+    margin-top: 30px;
     padding-left: 40px;
     border: none;
     border-radius: 20px;
@@ -30,18 +39,18 @@
 
 .landing-link-flex {
     box-sizing: border-box;
-    margin-top: 25px;
+    margin-top: 30px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .landing-links {
     height: 60px;
-    width: 165px;
+    width: 48%;
     position: relative;
     box-sizing: border-box;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     padding-left: 10px;
     border-radius: 15px;
     background: blue;
@@ -69,4 +78,9 @@
     position: absolute;
     right: -20px;
     bottom: -8px;
+}
+
+.news-container {
+    height: 40vh;
+    background-color: #E9E9E9;
 }
