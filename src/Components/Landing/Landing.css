@@ -1,0 +1,73 @@
+.landing {
+    box-sizing: border-box;
+    padding: 35px 15px 10px 15px;
+}
+
+.background-gray-icon {
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    top: -110px;
+    right: -75px;
+}
+
+.search-icon {
+    height: 35px;
+    width: calc(100% - 30px);
+    box-sizing: border-box;
+    margin-top: 30px;
+    padding-left: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #E9E9E9;
+    font-size: 18px;
+    background-image: url('../../assets/search.svg');
+    background-position-y: center;
+    background-position-x: 10px;
+    background-repeat: no-repeat;
+    outline: none;
+}
+
+.landing-link-flex {
+    box-sizing: border-box;
+    padding: 0px 5px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.landing-links {
+    height: 55px;
+    width: 160px;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 15px;
+    background: blue;
+    color: white;
+    font-weight: bold;
+    line-height: 55px;
+    text-align: left;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.bubble-style {
+    height: 44px;
+    width: 44px;
+    border-radius: 45%;
+    background-color: rgba(255, 255, 255, .5);
+    position: absolute;
+    top: -25px;
+    left: -21px;
+}
+
+.pokeball-icon {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    right: -20px;
+    bottom: -8px;
+}
