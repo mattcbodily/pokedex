@@ -1,13 +1,14 @@
 .landing {
     min-height: 100vh;
     background-color: #E9E9E9;
+    position: relative;
 }
 
 
 .background-gray-icon {
     height: 200px;
     width: 200px;
-    position: fixed;
+    position: absolute;
     top: -110px;
     right: -75px;
 }
@@ -81,6 +82,26 @@
 }
 
 .news-container {
-    height: 40vh;
+    min-height: 40vh;
     background-color: #E9E9E9;
+    padding: 25px 15px 0px 15px;
+}
+
+.article-link {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.article-link h5 {
+    width: 60%;
+    text-align: left;
+}
+
+.article-link img {
+    height: 75px;
+    width: 90px;
+    border-radius: 20px;
 }
