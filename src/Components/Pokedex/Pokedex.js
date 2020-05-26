@@ -27,13 +27,13 @@ const Pokedex = props => {
 
     return (
         <div className='pokedex'>
-            <img src={grayIcon} alt='large pokeball' className='gray-icon'/>
             {props.loadingObj.loading
             ? (<>
                 <img src={pokeLoading} alt='loading' className='loading-image'/>
                 <h4 className='loading-prompt'>Loading...</h4>
                </>)
             : <>
+                <img src={grayIcon} alt='large pokeball' className='gray-icon'/>
                 <Header />
                 <h1>Pokedex</h1>
                 <section className='pokedex-flex'>

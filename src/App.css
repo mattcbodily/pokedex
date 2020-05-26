@@ -38,12 +38,20 @@ h1, h4 {
   background: #61E1C8;
 }
 
+.grass-shadow {
+  box-shadow: 0px 12px 25px -8px #48D1B1;
+}
+
 .fire {
   background: #EF6566;
 }
 
 .fire-type {
   background: #F18D8C;
+}
+
+.fire-shadow {
+  box-shadow: 0px 12px 25px -8px #EF6566;
 }
 
 .water {
@@ -54,12 +62,20 @@ h1, h4 {
   background: #8FD0FA;
 }
 
+.water-shadow {
+  box-shadow: 0px 12px 25px -8px #77BEF9;
+}
+
 .electric {
   background: #FBD86E;
 }
 
 .electric-type {
   background: #FDE78A;
+}
+
+.electric-shadow {
+  box-shadow: 0px 12px 25px -8px #FBD86E;
 }
 
 .normal {
