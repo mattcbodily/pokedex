@@ -10,7 +10,7 @@ export default props => {
     const [newsArticles, setNewsArticles] = useState([]);
 
     useEffect(() => {
-        axios.get(`https://newsapi.org/v2/everything?qInTitle=pokemon&language=en&apiKey=${newsApiKey}`)
+        axios.get(`https://newsapi.org/v2/everything?qInTitle=pokemon&language=en&apiKey=${process.env.NEWS_KEY}`)
         .then(res => {
             let recentArticles = [];
             recentArticles.push(res.data.articles[0], res.data.articles[1], res.data.articles[2]);
