@@ -2,6 +2,7 @@
     min-height: 100vh;
     background-color: #E9E9E9;
     position: relative;
+    overflow: hidden;
 }
 
 
@@ -52,7 +53,7 @@
     position: relative;
     box-sizing: border-box;
     margin-bottom: 20px;
-    padding-left: 10px;
+    padding-left: 12px;
     border-radius: 15px;
     background: blue;
     color: white;
@@ -78,7 +79,7 @@
     width: 70px;
     position: absolute;
     right: -20px;
-    bottom: -8px;
+    bottom: -5px;
 }
 
 .news-container {
