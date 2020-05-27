@@ -8,6 +8,8 @@ import Evolution from './Evolution/Evolution';
 import Moves from './Moves/Moves';
 import loading from '../../HOCs/loading';
 import pokeLoading from '../../assets/pokeball-loading.png';
+import pokeIcon from '../../assets/pokesvg.svg';
+import dots from '../../assets/dots.svg';
 import './Pokemon.css';
 
 const Pokemon = props => {
@@ -37,8 +39,18 @@ const Pokemon = props => {
             <h4>Loading...</h4>
            </>)
         : (<div className={`pokemon ${pokemon.types.find(element => element.slot === 1).type.name}`}>
-            <Header theme='light'/>
-            <h1>{pokemon.name}</h1>
+            <section className='pokemon-intro'>
+                <Header theme='light'/>
+                <h1>{pokemon.name}</h1>
+                <div className='types-flex'>
+                    {pokemon.types.sort((a, b) => a.slot - b.slot).map((type, i) => (
+                        <div key={i} className={`pokemon-intro-type ${pokemon.types.find(element => element.slot === 1).type.name}-type`}>{type.type.name}</div>
+                    ))}
+                </div>
+                <div className='square-style'></div>
+                <img src={dots} alt='dots' className='dots'/>
+                <img src={pokeIcon} alt='Pokeball Icon' className='pokeIcon'/>
+            </section>
             <div className='pokemon-about'>
              <img src={pokemon.sprites.front_default} alt={pokemon.name} className='pokemon-about-image'/>
              <nav className='link-flex'>

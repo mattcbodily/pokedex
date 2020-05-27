@@ -4,6 +4,52 @@
     color: white;
 }
 
+.pokemon-intro {
+    padding: 30px 15px 0px 15px;
+}
+
+.types-flex {
+    margin-top: 10px;
+    display: flex;
+}
+
+.pokemon-intro-type {
+    height: 25px;
+    width: 80px;
+    line-height: 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin: 0px 4px;
+}
+
+.square-style {
+    height: 140px;
+    width: 140px;
+    border-radius: 15px;
+    transform: rotate(70deg);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, .6), rgba(255, 255, 255, .2));
+    position: fixed;
+    top: -50px;
+    left: -50px;
+}
+
+.dots {
+    height: 35px;
+    opacity: .5;
+    position: fixed;
+    top: 2px;
+    right: 20%;
+}
+
+.pokeIcon {
+    height: 180px;
+    width: 180px;
+    position: fixed;
+    top: 26%;
+    right: -20px;
+    opacity: .4;
+}
+
 .pokemon-about {
     height: 50%;
     width: 100%;

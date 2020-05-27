@@ -19,8 +19,6 @@ export default props => {
         .catch(err => console.log(err));
     }, [])
 
-    console.log(newsArticles)
-
     return (
         <div className='landing'>
             <img src={grayIcon} alt='gray icon' className='background-gray-icon'/>
