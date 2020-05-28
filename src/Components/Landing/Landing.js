@@ -37,7 +37,7 @@ export default props => {
                         Team Builder
                         <img src={pokeIcon} alt='pokeball icon' className='pokeball-icon'/>
                     </Link>
-                    <Link to='/pokedex' className='landing-links water water-shadow'>
+                    <Link to='/items' className='landing-links water water-shadow'>
                         <div className='bubble-style'></div>
                         Items
                         <img src={pokeIcon} alt='pokeball icon' className='pokeball-icon'/>
