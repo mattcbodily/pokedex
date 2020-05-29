@@ -13,11 +13,19 @@ export default props => {
         setHeight(`${feet}' ${remInches}"`);
     }
 
+    const getWeight = () => {
+        let pounds = props.weight / 4.536,
+            trimNum = Number(pounds.toFixed(1));
+        setWeight(trimNum);
+    }
+
     useEffect(() => {
         getHeight();
+        getWeight();
     }, [])
 
     console.log(height)
+    console.log(weight)
 
     return (
         <div className='about'>
